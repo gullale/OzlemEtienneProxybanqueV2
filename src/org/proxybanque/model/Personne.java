@@ -109,4 +109,18 @@ public class Personne {
 		this.ville = ville;
 		this.id = id;
 	}
+
+	public Personne() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Personne(String login, String password) {
+		super();
+		this.login = login;
+		this.password = password;
+	}
+	
+	
+	
 }

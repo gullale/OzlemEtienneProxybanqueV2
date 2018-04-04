@@ -2,6 +2,7 @@ package org.proxybanque.persistance;
 
 public interface DaoConseiller {
 
-	public String getConseillerInfos(int conseillerId);
+	public String getConseillerLogin(String conseillerLogin);
+	public String getConseillerPassword(String conseillerPassword);
 
 }

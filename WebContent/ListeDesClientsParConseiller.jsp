@@ -18,8 +18,6 @@
 		Liste de vos clients <br />
 	</h1>
 
-
-
 	<div>
 		<table>
 			<tr>
@@ -36,34 +34,32 @@
 
 			</tr>
 
-			<%-- <c:forEach items="${}" --%>
-			<%-- It <c:out value= "${clientId}" ></c:out> --%>
-			<%-- </c:forEach> --%>
+			<tr>
+				<td colspan="2"></td>
+			</tr>
 
-			<tr>
-				<td>Alfreds Futterkiste</td>
-				<td>Maria Anders</td>
-				<td>Germany</td>
-			</tr>
-			<tr>
-				<td>Centro comercial Moctezuma</td>
-				<td>Francisco Chang</td>
-				<td>Mexico</td>
-			</tr>
+			<c:forEach items="${sListClients}" var="client">
+					<tr>
+						<td><a href="ListeClients">${client.nom}</a></td>
+						<td><a href="ListeClients">${client.prenom}</a></td>
+						<td><a href="ListeClients">${client.email}</a></td>
+					</tr>
+			</c:forEach>
+
 
 		</table>
 	</div>
 
 
 
-	<div>
-
-
-
-		<br /> <input type="button" name="insertClient"
-			value="Nouveau Client"> <br />
+	<div class="button">
+		<a href=InsererClient.jsp> <br /> <input type="button"
+			name="insertClient" value="Nouveau Client"> <br />
+		</a>
 
 	</div>
+
+
 
 
 
