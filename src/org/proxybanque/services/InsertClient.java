@@ -37,15 +37,34 @@ public class InsertClient extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// Etape 1 : recupération des paramèrtes de la requête
+		// Etape 1 : recupération des paramètres de la requête
 		
+		String nom = request.getParameter("nom");
+		String prenom = request.getParameter("prenom");
 		String login = request.getParameter("login");
 		String password = request.getParameter("password");
+		String adresse = request.getParameter("adresse");
+		String codePostal = request.getParameter("codePostal");
+		String ville = request.getParameter("ville");
+		String telephone = request.getParameter("telephone");
+		String email = request.getParameter("email");
+		int idConseiller = Integer.valueOf(request.getParameter("idConseiller"));		
 		
 		// Etape 2 : Soumission des paramètres à la couche service et
 		// récupération des paramètres de la requête
 		
-		Client client = new Client(nom, prenom, login, password, adresse, codePostal, telephone, email, ville, id)
+		Client client = new Client(nom, prenom, login, password, adresse, codePostal, ville, telephone, email, idConseiller);
+		request.setAttribute("nom", nom);
+		request.setAttribute("prenom", prenom);
+		request.setAttribute("login", login);
+		request.setAttribute("password", password);
+		request.setAttribute("adresse", adresse);
+		request.setAttribute("codePostal", codePostal);
+		request.setAttribute("ville", ville);
+		request.setAttribute("telephone", telephone);
+		request.setAttribute("email", email);
+		request.setAttribute("idConseiller", idConseiller);
+		
 		
 		// Etape 3 : Réponse à l'utilisateur
 		

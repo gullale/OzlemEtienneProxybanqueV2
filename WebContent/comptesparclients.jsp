@@ -60,14 +60,14 @@
 
 
 	<div class="button">
-		<a href=ProxybanqueV2/Accueil.jsp> <br /> <input type="submit"
+		<a href=Accueil.jsp> <br /> <input type="submit"
 			value="retour vers l'Acceuil" /> <br />
 		</a>
 
 	</div>
 
 	<div class="button">
-		<a href=ProxybanqueV2/ListeDesClientsParConseiller.jsp><input
+		<a href=ListeDesClientsParConseiller.jsp><input
 			type="submit" value="Retour Liste Clients" />
 		</a>
 
